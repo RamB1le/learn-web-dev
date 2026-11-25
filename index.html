@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор даты и времени — Барбершоп</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">BLADE &amp; STYLE</a>
+      <nav class="steps" aria-label="Этапы записи">
+        <span class="steps__item steps__item--done">1. Услуга</span>
+        <span class="steps__item steps__item--active">2. Дата и время</span>
+        <span class="steps__item">3. Подтверждение</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1 class="page-title">Выберите дату и время</h1>
+
+      <section class="booking-info" aria-label="Детали выбранной услуги">
+        <div class="booking-info__card">
+          <p class="booking-info__label">Услуга</p>
+          <p class="booking-info__value">Мужская стрижка и укладка</p>
+        </div>
+        <div class="booking-info__card">
+          <p class="booking-info__label">Мастер</p>
+          <p class="booking-info__value">Алексей Смирнов</p>
+        </div>
+        <div class="booking-info__card">
+          <p class="booking-info__label">Стоимость</p>
+          <p class="booking-info__value">1 800 ₽</p>
+        </div>
+      </section>
+
+      <section class="selection-section">
+        <h2 class="section-title">Дата визита — Ноябрь</h2>
+        <div class="dates-grid">
+          <button type="button" class="date-card">
+            <span class="date-card__day">Пн</span>
+            <span class="date-card__num">23</span>
+          </button>
+          <button type="button" class="date-card">
+            <span class="date-card__day">Вт</span>
+            <span class="date-card__num">24</span>
+          </button>
+          <button type="button" class="date-card date-card--selected">
+            <span class="date-card__day">Ср</span>
+            <span class="date-card__num">25</span>
+          </button>
+          <button type="button" class="date-card">
+            <span class="date-card__day">Чт</span>
+            <span class="date-card__num">26</span>
+          </button>
+          <button type="button" class="date-card">
+            <span class="date-card__day">Пт</span>
+            <span class="date-card__num">27</span>
+          </button>
+          <button type="button" class="date-card">
+            <span class="date-card__day">Сб</span>
+            <span class="date-card__num">28</span>
+          </button>
+          <button type="button" class="date-card date-card--busy" disabled>
+            <span class="date-card__day">Вс</span>
+            <span class="date-card__num">29</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="selection-section">
+        <h2 class="section-title">Свободное время</h2>
+        <div class="slots-grid">
+          <button type="button" class="time-slot time-slot--busy" disabled>10:00</button>
+          <button type="button" class="time-slot">11:30</button>
+          <button type="button" class="time-slot time-slot--selected">13:00</button>
+          <button type="button" class="time-slot time-slot--busy" disabled>14:30</button>
+          <button type="button" class="time-slot">16:00</button>
+          <button type="button" class="time-slot">17:30</button>
+          <button type="button" class="time-slot time-slot--busy" disabled>19:00</button>
+          <button type="button" class="time-slot">20:30</button>
+        </div>
+      </section>
+
+      <div class="actions">
+        <a href="#" class="btn btn--secondary">Назад</a>
+        <a href="#" class="btn btn--primary">Продолжить запись</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Барбершоп Blade &amp; Style — Ежедневно с 10:00 до 22:00</p>
+      <p class="footer__text">+7 (999) 123-45-67</p>
+    </div>
+  </footer>
+</body>
+</html>

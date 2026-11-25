@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f4f4f6;
+  color: #1c1c1e;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #18181b;
+  color: #ffffff;
+  padding: 18px 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  color: #f59e0b;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.steps {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.steps__item {
+  color: #71717a;
+}
+
+.steps__item--done {
+  color: #a1a1aa;
+}
+
+.steps__item--active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.main {
+  flex: 1;
+  padding: 36px 0;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.booking-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.booking-info__card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.booking-info__label {
+  font-size: 13px;
+  color: #71717a;
+  margin-bottom: 4px;
+}
+
+.booking-info__value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.selection-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.dates-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.date-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 84px;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.date-card:hover:not(:disabled) {
+  border-color: #f59e0b;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.15);
+}
+
+.date-card__day {
+  font-size: 13px;
+  color: #71717a;
+  margin-bottom: 4px;
+}
+
+.date-card__num {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+.date-card--selected {
+  background-color: #18181b;
+  border-color: #18181b;
+}
+
+.date-card--selected .date-card__day,
+.date-card--selected .date-card__num {
+  color: #ffffff;
+}
+
+.date-card--busy {
+  background-color: #f4f4f5;
+  border-color: #e4e4e7;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.time-slot {
+  padding: 12px;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c1c1e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot:hover:not(:disabled) {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.time-slot--selected {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+  color: #18181b;
+}
+
+.time-slot--selected:hover:not(:disabled) {
+  background-color: #d97706;
+  border-color: #d97706;
+}
+
+.time-slot--busy {
+  background-color: #f4f4f5;
+  border-color: #e4e4e7;
+  color: #a1a1aa;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn--secondary {
+  background-color: #e4e4e7;
+  color: #1c1c1e;
+}
+
+.btn--secondary:hover {
+  background-color: #d4d4d8;
+}
+
+.btn--primary {
+  background-color: #f59e0b;
+  color: #18181b;
+}
+
+.btn--primary:hover {
+  background-color: #d97706;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.footer {
+  background-color: #18181b;
+  color: #a1a1aa;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
