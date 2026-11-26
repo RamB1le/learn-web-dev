@@ -3,99 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Выбор даты и времени — Барбершоп</title>
+  <meta name="description" content="Выбор даты и времени для записи в барбершоп.">
+  <title>Выбор даты и времени — BRUT</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#" class="logo">BLADE &amp; STYLE</a>
-      <nav class="steps" aria-label="Этапы записи">
-        <span class="steps__item steps__item--done">1. Услуга</span>
-        <span class="steps__item steps__item--active">2. Дата и время</span>
-        <span class="steps__item">3. Подтверждение</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#" aria-label="BRUT — главная">
+        <span class="logo-mark">B</span>
+        <span class="logo-name">BRUT<span class="logo-dot">.</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#">Главная</a>
+        <a href="#">Услуги</a>
+        <a href="#">Мастера</a>
+        <a href="#">Контакты</a>
       </nav>
+
+      <a class="header-phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+      <button class="menu-button" type="button" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main class="main">
-    <div class="container">
-      <h1 class="page-title">Выберите дату и время</h1>
-
-      <section class="booking-info" aria-label="Детали выбранной услуги">
-        <div class="booking-info__card">
-          <p class="booking-info__label">Услуга</p>
-          <p class="booking-info__value">Мужская стрижка и укладка</p>
+  <main class="booking-main">
+    <section class="booking-shell" aria-labelledby="page-title">
+      <div class="booking-progress" aria-label="Шаг 4 из 6">
+        <div class="progress-step is-complete">
+          <span class="step-number">✓</span>
+          <span class="step-name">Мастер</span>
         </div>
-        <div class="booking-info__card">
-          <p class="booking-info__label">Мастер</p>
-          <p class="booking-info__value">Алексей Смирнов</p>
+        <span class="progress-line is-complete"></span>
+        <div class="progress-step is-complete">
+          <span class="step-number">✓</span>
+          <span class="step-name">Услуга</span>
         </div>
-        <div class="booking-info__card">
-          <p class="booking-info__label">Стоимость</p>
-          <p class="booking-info__value">1 800 ₽</p>
+        <span class="progress-line is-current"></span>
+        <div class="progress-step is-current" aria-current="step">
+          <span class="step-number">3</span>
+          <span class="step-name">Дата и время</span>
         </div>
-      </section>
-
-      <section class="selection-section">
-        <h2 class="section-title">Дата визита — Ноябрь</h2>
-        <div class="dates-grid">
-          <button type="button" class="date-card">
-            <span class="date-card__day">Пн</span>
-            <span class="date-card__num">23</span>
-          </button>
-          <button type="button" class="date-card">
-            <span class="date-card__day">Вт</span>
-            <span class="date-card__num">24</span>
-          </button>
-          <button type="button" class="date-card date-card--selected">
-            <span class="date-card__day">Ср</span>
-            <span class="date-card__num">25</span>
-          </button>
-          <button type="button" class="date-card">
-            <span class="date-card__day">Чт</span>
-            <span class="date-card__num">26</span>
-          </button>
-          <button type="button" class="date-card">
-            <span class="date-card__day">Пт</span>
-            <span class="date-card__num">27</span>
-          </button>
-          <button type="button" class="date-card">
-            <span class="date-card__day">Сб</span>
-            <span class="date-card__num">28</span>
-          </button>
-          <button type="button" class="date-card date-card--busy" disabled>
-            <span class="date-card__day">Вс</span>
-            <span class="date-card__num">29</span>
-          </button>
+        <span class="progress-line"></span>
+        <div class="progress-step">
+          <span class="step-number">4</span>
+          <span class="step-name">Контакты</span>
         </div>
-      </section>
-
-      <section class="selection-section">
-        <h2 class="section-title">Свободное время</h2>
-        <div class="slots-grid">
-          <button type="button" class="time-slot time-slot--busy" disabled>10:00</button>
-          <button type="button" class="time-slot">11:30</button>
-          <button type="button" class="time-slot time-slot--selected">13:00</button>
-          <button type="button" class="time-slot time-slot--busy" disabled>14:30</button>
-          <button type="button" class="time-slot">16:00</button>
-          <button type="button" class="time-slot">17:30</button>
-          <button type="button" class="time-slot time-slot--busy" disabled>19:00</button>
-          <button type="button" class="time-slot">20:30</button>
+        <span class="progress-line"></span>
+        <div class="progress-step">
+          <span class="step-number">5</span>
+          <span class="step-name">Готово</span>
         </div>
-      </section>
-
-      <div class="actions">
-        <a href="#" class="btn btn--secondary">Назад</a>
-        <a href="#" class="btn btn--primary">Продолжить запись</a>
       </div>
-    </div>
+
+      <div class="page-heading">
+        <p class="eyebrow">ЗАПИСЬ ОНЛАЙН</p>
+        <h1 id="page-title">Выберите дату и время</h1>
+        <p class="page-description">Остался всего один шаг до встречи с вашим мастером.</p>
+      </div>
+
+      <div class="booking-layout">
+        <section class="calendar-card" aria-labelledby="calendar-title">
+          <div class="card-heading">
+            <div>
+              <h2 id="calendar-title">Выберите дату</h2>
+              <p>Доступные дни отмечены фиолетовым</p>
+            </div>
+            <div class="month-controls" aria-label="Переключение месяца">
+              <button class="month-arrow" type="button" aria-label="Предыдущий месяц">‹</button>
+              <button class="month-arrow" type="button" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+
+          <div class="calendar-month">Ноябрь <span>2026</span></div>
+          <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+            <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span>
+            <span>ПТ</span><span>СБ</span><span>ВС</span>
+          </div>
+
+          <div class="calendar-grid calendar-days" role="group" aria-label="Дни ноября 2026">
+            <span class="day-empty"></span><span class="day-empty"></span><span class="day-empty"></span>
+            <span class="day-empty"></span><span class="day-empty"></span><span class="day-empty"></span>
+            <input class="day-input" type="radio" name="booking-date" id="day-1" disabled><label class="day is-unavailable" for="day-1">1</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-2" disabled><label class="day is-unavailable" for="day-2">2</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-3" disabled><label class="day is-unavailable" for="day-3">3</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-4"><label class="day" for="day-4">4</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-5"><label class="day" for="day-5">5</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-6"><label class="day" for="day-6">6</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-7"><label class="day" for="day-7">7</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-8"><label class="day" for="day-8">8</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-9"><label class="day" for="day-9">9</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-10"><label class="day" for="day-10">10</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-11"><label class="day" for="day-11">11</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-12"><label class="day" for="day-12">12</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-13"><label class="day" for="day-13">13</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-14"><label class="day" for="day-14">14</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-15"><label class="day" for="day-15">15</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-16"><label class="day" for="day-16">16</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-17"><label class="day" for="day-17">17</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-18"><label class="day" for="day-18">18</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-19"><label class="day" for="day-19">19</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-20"><label class="day" for="day-20">20</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-21"><label class="day" for="day-21">21</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-22"><label class="day" for="day-22">22</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-23"><label class="day" for="day-23">23</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-24"><label class="day" for="day-24">24</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-25"><label class="day" for="day-25">25</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-26"><label class="day" for="day-26">26</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-27" checked><label class="day" for="day-27">27</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-28"><label class="day" for="day-28">28</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-29"><label class="day" for="day-29">29</label>
+            <input class="day-input" type="radio" name="booking-date" id="day-30"><label class="day" for="day-30">30</label>
+          </div>
+
+          <div class="calendar-legend">
+            <span><i class="legend-dot legend-free"></i> Свободный день</span>
+            <span><i class="legend-dot legend-busy"></i> Нет мест</span>
+            <span><i class="legend-dot legend-selected"></i> Выбран</span>
+          </div>
+        </section>
+
+        <section class="time-card" aria-labelledby="time-title">
+          <div class="card-heading">
+            <div>
+              <h2 id="time-title">Доступное время</h2>
+              <p>Пятница, 27 ноября</p>
+            </div>
+            <span class="timezone">МСК</span>
+          </div>
+
+          <div class="time-grid" role="group" aria-label="Время записи">
+            <input class="time-input" type="radio" name="booking-time" id="time-1000">
+            <label class="time-slot" for="time-1000">10:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1100" disabled>
+            <label class="time-slot is-busy" for="time-1100">11:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1200" checked>
+            <label class="time-slot" for="time-1200">12:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1300">
+            <label class="time-slot" for="time-1300">13:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1400" disabled>
+            <label class="time-slot is-busy" for="time-1400">14:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1500">
+            <label class="time-slot" for="time-1500">15:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1600">
+            <label class="time-slot" for="time-1600">16:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1700" disabled>
+            <label class="time-slot is-busy" for="time-1700">17:00</label>
+            <input class="time-input" type="radio" name="booking-time" id="time-1800">
+            <label class="time-slot" for="time-1800">18:00</label>
+          </div>
+
+          <div class="selected-summary">
+            <span class="summary-icon">✓</span>
+            <p>Выбрано время: <strong>12:00</strong></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="booking-actions">
+        <a class="back-link" href="#">← Назад к выбору услуги</a>
+        <a class="primary-button" href="#">Продолжить <span>→</span></a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__text">Барбершоп Blade &amp; Style — Ежедневно с 10:00 до 22:00</p>
-      <p class="footer__text">+7 (999) 123-45-67</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="logo logo-light" href="#">
+          <span class="logo-mark">B</span>
+          <span class="logo-name">BRUT<span class="logo-dot">.</span></span>
+        </a>
+        <p>Место, где стиль становится характером.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Контакты</h2>
+        <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+        <a href="mailto:hello@brut.ru">hello@brut.ru</a>
+      </div>
+      <div class="footer-column">
+        <h2>Мы работаем</h2>
+        <p>Ежедневно</p>
+        <p>10:00 — 22:00</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BRUT Barbershop</span>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 </body>
